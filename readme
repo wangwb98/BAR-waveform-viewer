@@ -1,0 +1,6 @@
+Usage:
+
+file_content是readlines读出的。
+Vcd=vcd_parse(file_content).
+
+Note, if using fsdb file, it can be convirted by fsdb2vcd to vcd.
