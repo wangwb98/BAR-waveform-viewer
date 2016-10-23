@@ -1,0 +1,13 @@
+
+fsdb2vcd novas.fsdb -o output.vcd
+This will generate the vcd file.
+
+
+h1. Design
+
+The goal is, collect every read/write access of core0.
+
+* functions:
+** dump_rw(), it returns the rw_list, each item in which will be (timestamp, addr, r or w). Its logic will be:
+*** for each arvalid falling edge, get the araddr signals, put it into the r_list. (data should be rising edge??)
+*** for each awvalid falling edge, get the awaddr signal value, and put into w_list.
