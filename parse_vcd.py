@@ -75,7 +75,7 @@ class vcd_reader:
                     if scopes[scope]!='':
                         current_scope=current_scope+'/'+scopes[scope]
                 #print current_scope
-            matchObj=re.match(r'^\$var\s+(\w+)\s+(\d+)\s+(\S+?)\s+(\S+)\s+\$end$', file_content[line_no])
+            matchObj=re.match(r'^\$var\s+(\w+)\s+(\d+)\s+(\S+?)\s+(.+) \$end$', file_content[line_no])
             #reading the lines starting with var and assigning to signal_symbol_dict
             if matchObj:
                 #print matchObj.group(3)
